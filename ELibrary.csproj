@@ -888,16 +888,21 @@
     <Content Include="feather\zoom-in.svg" />
     <Content Include="feather\zoom-out.svg" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\LibraryImage.svg" />
     <Content Include="Images\7286383_31705 %281%29.svg" />
     <Content Include="Images\book-shelf_10421531.png" />
     <Content Include="Images\books_1050267 %281%29.png" />
     <Content Include="Images\book_5773480.png" />
+    <Content Include="Images\download.jpg" />
+    <Content Include="Images\download.svg" />
     <Content Include="Images\location_8459441.png" />
     <Content Include="Images\meds_2878350.png" />
     <Content Include="Images\search_5597077.png" />
     <Content Include="Images\signup_5685091.png" />
     <Content Include="Images\stock-vector-set-with-abstract-lettering-about-books-and-reading-for-poster-design-handwritten-letters-1444790705.jpg" />
     <Content Include="Images\tracking_2880984.png" />
+    <Content Include="Images\userLoginLogo.png" />
+    <Content Include="UserLogin.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebPage.aspx" />
   </ItemGroup>
@@ -916,6 +921,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebPage.aspx.cs">
       <DependentUpon>WebPage.aspx</DependentUpon>

@@ -34,7 +34,7 @@
         </div>
     </section>
     <section>
-        <img src="Images/stock-vector-set-with-abstract-lettering-about-books-and-reading-for-poster-design-handwritten-letters-1444790705.jpg" style="height: 50vh; width: 100vw;" />
+        <img src="Images/LibraryImage.svg"/>
     </section>
     <section>
         <div class="container">
