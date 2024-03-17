@@ -1,0 +1,13 @@
+#Ignore .vs files
+/.vs/
+#Ignore Bin Files
+bin/
+#Ignore Bootstrap,Font Awesome,Packages Files
+/Bootstrap/
+/DataTables/
+/feather/
+/FontAwesome/
+/obj/
+/packages/
+web.config
+/Properties/
