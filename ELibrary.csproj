@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adminAuthorManagement.aspx" />
+    <Content Include="AdminBookIssuePage.aspx" />
     <Content Include="AdminLoginPage.aspx" />
     <Content Include="adminPublisherManagement.aspx" />
     <Content Include="Bootstrap\BootstrapScript.js" />
@@ -891,6 +892,7 @@
     <Content Include="feather\zoom-in.svg" />
     <Content Include="feather\zoom-out.svg" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\book-stack_3389081.png" />
     <Content Include="Images\LibraryImage.svg" />
     <Content Include="Images\7286383_31705 %281%29.svg" />
     <Content Include="Images\book-shelf_10421531.png" />
@@ -919,6 +921,13 @@
     </Compile>
     <Compile Include="adminAuthorManagement.aspx.designer.cs">
       <DependentUpon>adminAuthorManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminBookIssuePage.aspx.cs">
+      <DependentUpon>AdminBookIssuePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBookIssuePage.aspx.designer.cs">
+      <DependentUpon>AdminBookIssuePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminLoginPage.aspx.cs">
       <DependentUpon>AdminLoginPage.aspx</DependentUpon>
