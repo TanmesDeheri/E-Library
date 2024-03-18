@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminLoginPage.aspx" />
     <Content Include="Bootstrap\BootstrapScript.js" />
     <Content Include="Bootstrap\jQuery.js" />
     <Content Include="Bootstrap\Popper.js" />
@@ -899,6 +900,7 @@
     <Content Include="Images\meds_2878350.png" />
     <Content Include="Images\search_5597077.png" />
     <Content Include="Images\signup_5685091.png" />
+    <Content Include="Images\software-engineer_6024190.png" />
     <Content Include="Images\stock-vector-set-with-abstract-lettering-about-books-and-reading-for-poster-design-handwritten-letters-1444790705.jpg" />
     <Content Include="Images\tracking_2880984.png" />
     <Content Include="Images\userLoginLogo.png" />
@@ -907,6 +909,13 @@
     <Content Include="WebPage.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminLoginPage.aspx.cs">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLoginPage.aspx.designer.cs">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
