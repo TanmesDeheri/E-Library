@@ -905,6 +905,7 @@
     <Content Include="Images\tracking_2880984.png" />
     <Content Include="Images\userLoginLogo.png" />
     <Content Include="UserLogin.aspx" />
+    <Content Include="UserProfilePage.aspx" />
     <Content Include="UserSignUp.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebPage.aspx" />
@@ -938,6 +939,13 @@
     </Compile>
     <Compile Include="UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfilePage.aspx.cs">
+      <DependentUpon>UserProfilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfilePage.aspx.designer.cs">
+      <DependentUpon>UserProfilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserSignUp.aspx.cs">
       <DependentUpon>UserSignUp.aspx</DependentUpon>
