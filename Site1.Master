@@ -12,8 +12,15 @@
     <script src="Bootstrap/Popper.js"></script>
     <script src="DataTables/datatables.min.js"></script>
     <script src="https://kit.fontawesome.com/31439c0912.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+        body {
+            font-family: "Sansita", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>

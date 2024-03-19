@@ -30,7 +30,7 @@
                                 <label class="mb-3">Book ID</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox ID="BookID" CssClass="form-control" runat="server" Text="Book Id"></asp:TextBox>
+                                        <asp:TextBox ID="BookID" CssClass="form-control" runat="server" placeholder="Book Id"></asp:TextBox>
                                         <asp:Button ID="Button1" CssClass="btn btn-secondary" type="button" runat="server" Text="Go" />
                                     </div>
                                 </div>
@@ -47,7 +47,7 @@
                                 <label class="mb-3">Book Name</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" Text="Book Name"></asp:TextBox>
+                                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" placeholder="Book Name"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>

@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adminAuthorManagement.aspx" />
+    <Content Include="AdminBookInventory.aspx" />
     <Content Include="AdminBookIssuePage.aspx" />
     <Content Include="AdminLoginPage.aspx" />
+    <Content Include="AdminMemberManagement.aspx" />
     <Content Include="adminPublisherManagement.aspx" />
     <Content Include="Bootstrap\BootstrapScript.js" />
     <Content Include="Bootstrap\jQuery.js" />
@@ -922,6 +924,13 @@
     <Compile Include="adminAuthorManagement.aspx.designer.cs">
       <DependentUpon>adminAuthorManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminBookInventory.aspx.cs">
+      <DependentUpon>AdminBookInventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminBookInventory.aspx.designer.cs">
+      <DependentUpon>AdminBookInventory.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminBookIssuePage.aspx.cs">
       <DependentUpon>AdminBookIssuePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -935,6 +944,13 @@
     </Compile>
     <Compile Include="AdminLoginPage.aspx.designer.cs">
       <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMemberManagement.aspx.cs">
+      <DependentUpon>AdminMemberManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMemberManagement.aspx.designer.cs">
+      <DependentUpon>AdminMemberManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="adminPublisherManagement.aspx.cs">
       <DependentUpon>adminPublisherManagement.aspx</DependentUpon>
