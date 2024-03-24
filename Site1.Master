@@ -29,7 +29,7 @@
     <form id="form1" runat="server">
         <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class=" navbar-brand" href="#">
+                <a class=" navbar-brand" href="HomePage.aspx">
                     <img src="Images/books_1050267%20(1).png" />
                     E-Library
                 </a>
@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="HomePage.aspx">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About Us</a>
@@ -53,16 +53,16 @@
                             <asp:LinkButton CssClass="nav-link" ID="ActionLinkButton" runat="server">View Books</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="UserLogin" runat="server">User Login</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="UserLogin" runat="server" OnClick="RedirectToLogin">User Login</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="SignUp" runat="server">Sign Up</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="SignUp" runat="server" OnClick="RedirectToSignUp">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="LogOut" runat="server">Log Out</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="LogOut" runat="server" Visible="false">Log Out</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="userNameButton" runat="server">Hello User</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="userNameButton" runat="server" Visible="false">Hello User</asp:LinkButton>
                         </li>
                     </ul>
                 </div>
@@ -87,17 +87,16 @@
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12">
-                            <asp:LinkButton ID="btnAdminLogin" runat="server" CssClass=" nav-link me-2" Text="Admin Login"></asp:LinkButton>
-                            <asp:LinkButton ID="btnAuthorManagement" runat="server" CssClass="nav-link me-2" Text="Author Management"></asp:LinkButton>
-                            <asp:LinkButton ID="btnPublisherManagement" runat="server" CssClass="nav-link me-2" Text="Publisher Management"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookInventory" runat="server" CssClass="nav-link me-2" Text="Book Inventory"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookIssuing" runat="server" CssClass="nav-link me-2" Text="Book Issuing"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookManagement" runat="server" CssClass="nav-link me-2" Text="Book Management"></asp:LinkButton>
+                            <asp:LinkButton ID="btnAdminLogin" runat="server" CssClass=" nav-link me-2" Text="Admin Login" OnClick="RedirectToAdminLogin"></asp:LinkButton>
+                            <asp:LinkButton ID="btnAuthorManagement" runat="server" CssClass="nav-link me-2" Text="Author Management" OnClick="RedirectToAuthorManagement" Visible="false"></asp:LinkButton>
+                            <asp:LinkButton ID="btnPublisherManagement" runat="server" CssClass="nav-link me-2" Text="Publisher Management" Visible="false"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookInventory" runat="server" CssClass="nav-link me-2" Text="Book Inventory" Visible="false"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookIssuing" runat="server" CssClass="nav-link me-2" Text="Book Issuing" Visible="false"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookManagement" runat="server" CssClass="nav-link me-2" Text="Book Management" Visible="false"></asp:LinkButton>
                         </div>
                     </div>
                 </div>
             </footer>
-
         </div>
     </form>
 </body>

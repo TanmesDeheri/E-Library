@@ -606,6 +606,7 @@
     <Content Include="DataTables\StateRestore-1.4.0\js\stateRestore.jqueryui.min.js" />
     <Content Include="DataTables\StateRestore-1.4.0\js\stateRestore.semanticui.js" />
     <Content Include="DataTables\StateRestore-1.4.0\js\stateRestore.semanticui.min.js" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="feather\activity.svg" />
     <Content Include="feather\airplay.svg" />
     <Content Include="feather\alert-circle.svg" />
@@ -894,6 +895,7 @@
     <Content Include="feather\zoom-in.svg" />
     <Content Include="feather\zoom-out.svg" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\errorSign.svg" />
     <Content Include="Images\book-stack_3389081.png" />
     <Content Include="Images\LibraryImage.svg" />
     <Content Include="Images\7286383_31705 %281%29.svg" />
@@ -958,6 +960,13 @@
     </Compile>
     <Compile Include="adminPublisherManagement.aspx.designer.cs">
       <DependentUpon>adminPublisherManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>

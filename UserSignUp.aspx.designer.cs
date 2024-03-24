@@ -33,22 +33,22 @@ namespace ELibrary
         protected global::System.Web.UI.WebControls.TextBox userSignUpDOB;
 
         /// <summary>
-        /// TextBox1 control.
+        /// userContactNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox userContactNumber;
 
         /// <summary>
-        /// TextBox2 control.
+        /// userEmailID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox userEmailID;
 
         /// <summary>
         /// StateDropdown control.
@@ -60,57 +60,57 @@ namespace ELibrary
         protected global::System.Web.UI.WebControls.DropDownList StateDropdown;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// CityDropdown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList CityDropdown;
 
         /// <summary>
-        /// TextBox7 control.
+        /// userPinCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox userPinCode;
 
         /// <summary>
-        /// TextBox3 control.
+        /// userAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox userAddress;
 
         /// <summary>
-        /// SignUpUserID control.
+        /// userID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SignUpUserID;
+        protected global::System.Web.UI.WebControls.TextBox userID;
 
         /// <summary>
-        /// TextBox6 control.
+        /// memberPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox memberPassword;
 
         /// <summary>
-        /// userLoginButton control.
+        /// userSignUpButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button userLoginButton;
+        protected global::System.Web.UI.WebControls.Button userSignUpButton;
     }
 }
