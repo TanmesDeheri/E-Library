@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html data-bs-theme="dark">
 <head runat="server">
     <title>Demo Project</title>
     <link href="Bootstrap/style.css" rel="stylesheet" />
@@ -59,10 +59,28 @@
                             <asp:LinkButton CssClass="nav-link" ID="SignUp" runat="server" OnClick="RedirectToSignUp">Sign Up</asp:LinkButton>
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="LogOut" runat="server" Visible="false">Log Out</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="LogOut" runat="server" data-bs-toggle="modal" data-bs-target="#exampleModal">Log Out</asp:LinkButton>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Confirm</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="display-7 font-monospace">Do you want to Log Out?</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                            <asp:Button type="button" class="btn btn-outline-primary" runat="server" Text="Yes" OnClick="LoggingOut"></asp:Button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="userNameButton" runat="server" Visible="false">Hello User</asp:LinkButton>
+                            <asp:LinkButton CssClass="nav-link" ID="userNameButton" runat="server">Hello User</asp:LinkButton>
                         </li>
                     </ul>
                 </div>
@@ -88,11 +106,11 @@
                     <div class="row mt-3">
                         <div class="col-md-12">
                             <asp:LinkButton ID="btnAdminLogin" runat="server" CssClass=" nav-link me-2" Text="Admin Login" OnClick="RedirectToAdminLogin"></asp:LinkButton>
-                            <asp:LinkButton ID="btnAuthorManagement" runat="server" CssClass="nav-link me-2" Text="Author Management" OnClick="RedirectToAuthorManagement" Visible="false"></asp:LinkButton>
-                            <asp:LinkButton ID="btnPublisherManagement" runat="server" CssClass="nav-link me-2" Text="Publisher Management" Visible="false"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookInventory" runat="server" CssClass="nav-link me-2" Text="Book Inventory" Visible="false"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookIssuing" runat="server" CssClass="nav-link me-2" Text="Book Issuing" Visible="false"></asp:LinkButton>
-                            <asp:LinkButton ID="btnBookManagement" runat="server" CssClass="nav-link me-2" Text="Book Management" Visible="false"></asp:LinkButton>
+                            <asp:LinkButton ID="btnAuthorManagement" runat="server" CssClass="nav-link me-2" Text="Author Management" OnClick="RedirectToAuthorManagement"></asp:LinkButton>
+                            <asp:LinkButton ID="btnPublisherManagement" runat="server" CssClass="nav-link me-2" Text="Publisher Management"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookInventory" runat="server" CssClass="nav-link me-2" Text="Book Inventory"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookIssuing" runat="server" CssClass="nav-link me-2" Text="Book Issuing"></asp:LinkButton>
+                            <asp:LinkButton ID="btnBookManagement" runat="server" CssClass="nav-link me-2" Text="Book Management"></asp:LinkButton>
                         </div>
                     </div>
                 </div>

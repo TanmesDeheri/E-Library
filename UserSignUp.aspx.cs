@@ -14,6 +14,7 @@ namespace ELibrary
     public partial class UserSignUp : System.Web.UI.Page
     {
         readonly string strcon = ConfigurationManager.ConnectionStrings["connectionToDB"].ConnectionString;
+        private SqlConnection connection;
         Dictionary<string, List<string>> stateCityMap = new Dictionary<string, List<string>>
            {
              {"California", new List<string>{"Los Angeles", "San Francisco", "San Diego"}},
@@ -27,6 +28,10 @@ namespace ELibrary
              {"Georgia", new List<string>{"Atlanta", "Savannah", "Augusta"}},
              {"North Carolina", new List<string>{"Charlotte", "Raleigh", "Greensboro"}}
            };
+        private SqlConnection GetSQLConnection()
+        {
+            return new SqlConnection(strcon);
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -85,9 +90,9 @@ namespace ELibrary
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(strcon))
+                using (connection=GetSQLConnection())
                 {
-                    SqlCommand sqlCommand = new SqlCommand("SELECT MEMBER_ID FROM MEMBER_MASTER_TABLE WHERE MEMBER_ID='" + userID.Text.Trim() + "';", conn);
+                    SqlCommand sqlCommand = new SqlCommand("SELECT MEMBER_ID FROM MEMBER_MASTER_TABLE WHERE MEMBER_ID='" + userID.Text.Trim() + "';",connection);
                     SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
                     DataTable dataTable = new DataTable();
                     sqlDataAdapter.Fill(dataTable);
@@ -112,10 +117,10 @@ namespace ELibrary
         {
             try
             {
-                using (SqlConnection sqlConnection = new SqlConnection(strcon))
+                using (connection=GetSQLConnection())
                 {
-                    sqlConnection.Open();
-                    SqlCommand sqlCommand = new SqlCommand("INSERT INTO MEMBER_MASTER_TABLE(FULL_NAME,DATE_OF_BIRTH,CONTACT_NUMBER,EMAIL,STATE_NAME,CITY,PINCODE,FULL_ADDRESS,MEMBER_ID,MEMBER_PASSWORD,ACCOUNT_STATUS) VALUES (@FULL_NAME,@DATE_OF_BIRTH,@CONTACT_NUMBER,@EMAIL,@STATE_NAME,@CITY,@PINCODE,@FULL_ADDRESS,@MEMBER_ID,@MEMBER_PASSWORD,@ACCOUNT_STATUS)", sqlConnection);
+                    connection.Open();
+                    SqlCommand sqlCommand = new SqlCommand("INSERT INTO MEMBER_MASTER_TABLE(FULL_NAME,DATE_OF_BIRTH,CONTACT_NUMBER,EMAIL,STATE_NAME,CITY,PINCODE,FULL_ADDRESS,MEMBER_ID,MEMBER_PASSWORD,ACCOUNT_STATUS) VALUES (@FULL_NAME,@DATE_OF_BIRTH,@CONTACT_NUMBER,@EMAIL,@STATE_NAME,@CITY,@PINCODE,@FULL_ADDRESS,@MEMBER_ID,@MEMBER_PASSWORD,@ACCOUNT_STATUS)",connection);
                     sqlCommand.Parameters.AddWithValue("@FULL_NAME", userSignUpFullName.Text.Trim());
                     sqlCommand.Parameters.AddWithValue("@DATE_OF_BIRTH", userSignUpDOB.Text.Trim());
                     sqlCommand.Parameters.AddWithValue("@CONTACT_NUMBER", userContactNumber.Text.Trim());

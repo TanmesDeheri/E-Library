@@ -39,19 +39,19 @@
                         <div class="row mb-3">
                             <div class="col">
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                    <asp:TextBox ID="MemberLoginPassword" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <div class=" row">
                             <div class="col-sm-6 text-end">
                                 <div class="form-group">
-                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-primary" type="button" runat="server" Text="Login" />
+                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-primary" type="button" runat="server" Text="Login" OnClick="CheckLoginCrendentials"/>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <asp:Button ID="userSignUpButton" CssClass="btn btn-outline-success" runat="server" Text="SignUp" />
+                                    <asp:Button ID="userSignUpButton" CssClass="btn btn-outline-success" runat="server" Text="SignUp" OnClick="RedirectToSignUpPage" />
                                 </div>
                             </div>
                         </div>

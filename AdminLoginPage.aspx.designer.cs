@@ -15,22 +15,22 @@ namespace ELibrary
     {
 
         /// <summary>
-        /// memberLoginID control.
+        /// adminLoginID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox memberLoginID;
+        protected global::System.Web.UI.WebControls.TextBox adminLoginID;
 
         /// <summary>
-        /// TextBox1 control.
+        /// adminLoginPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox adminLoginPassword;
 
         /// <summary>
         /// userLoginButton control.

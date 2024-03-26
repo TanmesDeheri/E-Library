@@ -26,7 +26,7 @@
                     <div class="row mb-3">
                         <div class="col">
                             <div class="form-group">
-                                <asp:TextBox ID="memberLoginID" CssClass="form-control" runat="server" placeholder="Member ID"></asp:TextBox>
+                                <asp:TextBox ID="adminLoginID" CssClass="form-control" runat="server" placeholder="Member ID"></asp:TextBox>
                             </div>
                         </div>
                     </div>
@@ -38,14 +38,14 @@
                     <div class="row mb-3">
                         <div class="col">
                             <div class="form-group">
-                                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="adminLoginPassword" CssClass="form-control" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox>
                             </div>
                         </div>
                     </div>
                     <div class=" row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <asp:Button ID="userLoginButton" CssClass="btn btn-outline-primary" Width="100%" type="button" runat="server" Text="Login" />
+                                <asp:Button ID="userLoginButton" CssClass="btn btn-outline-primary" Width="100%" type="button" runat="server" Text="Login" OnClick="CheckCredentials" />
                             </div>
                         </div>
                     </div>
