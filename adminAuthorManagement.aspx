@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminAuthorManagement.aspx.cs" Inherits="ELibrary.adminAuthorManagement" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SiteMasterContentPlaceHolder" runat="server">
     <div class="container my-5">
@@ -40,17 +45,17 @@
                         <div class=" row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Add" />
+                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Add" OnClick="QueryAuthorDetails" />
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary mb-3" type="button" Width="100%" runat="server" Text="Update" />
+                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary mb-3" type="button" Width="100%" runat="server" Text="Update" OnClick="EdtiAuthorDetails" />
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <asp:Button ID="Button3" CssClass="btn btn-outline-danger mb-3" type="button" Width="100%" runat="server" Text="Delete" />
+                                    <asp:Button ID="Button3" CssClass="btn btn-outline-danger mb-3" type="button" Width="100%" runat="server" Text="Delete" OnClick="DeleteAuthorDetails" />
                                 </div>
                             </div>
                         </div>
@@ -68,7 +73,8 @@
                         <hr />
                         <div class="row mb-3">
                             <div class="col-md-12">
-                                <asp:GridView ID="gridView" CssClass="table table-success table-striped table-hover" runat="server"></asp:GridView>
+                                <asp:SqlDataSource ID="sqldsSuppliers" runat="server" ConnectionString="<%$ ConnectionStrings:connectionToDB %>" SelectCommand="SELECT * FROM AUTHOR_MASTER_TABLE"></asp:SqlDataSource>
+                                <asp:GridView ID="gridView" CssClass="table stripe table-hover table-responsive-md" runat="server" DataSourceID="sqldsSuppliers" AutoGenerateColumns="true"></asp:GridView>
                             </div>
                         </div>
                     </div>
