@@ -45,7 +45,8 @@
                         <div class=" row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Add" OnClick="QueryAuthorDetails" />
+                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Add" data-bs-toggle="modal" data-bs-target="#exampleModal" OnClick="QueryAuthorDetails" />
+
                                 </div>
                             </div>
                             <div class="col-sm-4">

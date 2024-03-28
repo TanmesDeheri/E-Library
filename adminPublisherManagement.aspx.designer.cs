@@ -15,13 +15,13 @@ namespace ELibrary
     {
 
         /// <summary>
-        /// AuthorID control.
+        /// PublisherID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AuthorID;
+        protected global::System.Web.UI.WebControls.TextBox PublisherID;
 
         /// <summary>
         /// Button1 control.
@@ -33,13 +33,13 @@ namespace ELibrary
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// AuthorName control.
+        /// PublisherName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AuthorName;
+        protected global::System.Web.UI.WebControls.TextBox PublisherName;
 
         /// <summary>
         /// userLoginButton control.
@@ -67,6 +67,15 @@ namespace ELibrary
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
+
+        /// <summary>
+        /// sqldsSuppliers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource sqldsSuppliers;
 
         /// <summary>
         /// gridView control.
