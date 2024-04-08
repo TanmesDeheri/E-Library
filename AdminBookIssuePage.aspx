@@ -1,11 +1,30 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AdminBookIssuePage.aspx.cs" Inherits="ELibrary.AdminBookIssuePage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.table').prepend($("<thead></thead>").append($(this).find("tr:first"))).DataTable();
+        });
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = (e) => {
+                    $('#imgTag').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+    <style>
+        .book-id-column {
+            width: 5vw;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="SiteMasterContentPlaceHolder" runat="server">
     <div class="container-fluid my-5">
         <div class="row mt-1">
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -31,7 +50,7 @@
                                 <div class="form-group">
                                     <div class="input-group">
                                         <asp:TextBox ID="BookID" CssClass="form-control" runat="server" placeholder="Book Id"></asp:TextBox>
-                                        <asp:Button ID="Button1" CssClass="btn btn-secondary" type="button" runat="server" Text="Go" />
+                                        <asp:Button ID="QueryButton" CssClass="btn btn-secondary" type="button" runat="server" Text="Go" OnClick="HandleButtonClickEvents" />
                                     </div>
                                 </div>
                             </div>
@@ -40,14 +59,14 @@
                             <div class="col-md-6">
                                 <label class="mb-3">Member Name</label>
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox1" CssClass="form-control mb-3" runat="server" placeholder="Member Name"></asp:TextBox>
+                                    <asp:TextBox ID="memberName" CssClass="form-control mb-3" runat="server" placeholder="Member Name"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label class="mb-3">Book Name</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" placeholder="Book Name"></asp:TextBox>
+                                        <asp:TextBox ID="bookName" CssClass="form-control" runat="server" placeholder="Book Name"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -56,14 +75,14 @@
                             <div class="col-md-6">
                                 <label class="mb-3">Start Date</label>
                                 <div class="form-group">
-                                    <asp:TextBox ID="TextBox3" CssClass="form-control mb-3" runat="server" TextMode="Date"></asp:TextBox>
+                                    <asp:TextBox ID="issueDate" CssClass="form-control mb-3" runat="server" TextMode="Date"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label class="mb-3">End Date</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" TextMode="Date"></asp:TextBox>
+                                        <asp:TextBox ID="returnDate" CssClass="form-control" runat="server" TextMode="Date"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -71,19 +90,19 @@
                         <div class=" row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <asp:Button ID="userLoginButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Issue" />
+                                    <asp:Button ID="issueButton" CssClass="btn btn-outline-success mb-3" type="button" Width="100%" runat="server" Text="Issue" OnClick="HandleButtonClickEvents" />
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <asp:Button ID="Button2" CssClass="btn btn-outline-primary mb-3" type="button" Width="100%" runat="server" Text="Return" />
+                                    <asp:Button ID="returnButton" CssClass="btn btn-outline-primary mb-3" type="button" Width="100%" runat="server" Text="Return" OnClick="HandleButtonClickEvents" />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -94,7 +113,17 @@
                         <hr />
                         <div class="row mb-3">
                             <div class="col-md-12">
-                                <asp:GridView ID="gridView" CssClass="table table-success table-striped table-hover" runat="server"></asp:GridView>
+                                <asp:SqlDataSource runat="server" ID="sqlDs" ConnectionString='<%$ ConnectionStrings:OnlineLibraryManagementDBConnectionString %>' ProviderName='<%$ ConnectionStrings:OnlineLibraryManagementDBConnectionString.ProviderName %>' SelectCommand="SELECT * FROM [BOOK_ISSUE_TABLE]"></asp:SqlDataSource>
+                                <asp:GridView ID="gridView" CssClass="table table-success table-striped table-bordered table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="sqlDs" OnRowDataBound="DefaultersRecord">
+                                    <Columns>
+                                        <asp:BoundField DataField="MEMBER_ID" HeaderText="MEMBER ID" SortExpression="MEMBER_ID"></asp:BoundField>
+                                        <asp:BoundField DataField="MEMBER_NAME" HeaderText="MEMBER NAME" SortExpression="MEMBER_NAME"></asp:BoundField>
+                                        <asp:BoundField DataField="BOOK_ID" HeaderText="BOOK ID" SortExpression="BOOK_ID"></asp:BoundField>
+                                        <asp:BoundField DataField="BOOK_NAME" HeaderText="BOOK NAME" SortExpression="BOOK_NAME"></asp:BoundField>
+                                        <asp:BoundField DataField="ISSUE_DATE" HeaderText="ISSUE DATE" SortExpression="ISSUE_DATE"></asp:BoundField>
+                                        <asp:BoundField DataField="DUE_DATE" HeaderText="DUE DATE" SortExpression="DUE_DATE"></asp:BoundField>
+                                    </Columns>
+                                </asp:GridView>
                             </div>
                         </div>
                     </div>

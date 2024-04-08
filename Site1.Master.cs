@@ -13,12 +13,12 @@ namespace ELibrary
         protected void Page_Load(object sender, EventArgs e)
         {
             string role = "";
-            if (Session["role"]!=null)
+            if (Session["role"] != null)
                 //Most of the Time when the page loads the session variable is null,hence gives null reference Exception,So handle this exception 
-            role = Session["role"].ToString();
+                role = Session["role"].ToString();
             try
             {
-                if (role=="member")
+                if (role == "member")
                 {
                     SignUp.Visible = false;
                     UserLogin.Visible = false;
@@ -30,8 +30,10 @@ namespace ELibrary
                     btnBookInventory.Visible = false;
                     btnBookIssuing.Visible = false;
                     btnBookManagement.Visible = false;
+                    btnMemberManagement.Visible = false;
+
                 }
-                else if (role=="admin")
+                else if (role == "admin")
                 {
                     SignUp.Visible = false;
                     UserLogin.Visible = false;
@@ -44,6 +46,7 @@ namespace ELibrary
                     btnBookInventory.Visible = true;
                     btnBookIssuing.Visible = true;
                     btnBookManagement.Visible = true;
+                    btnMemberManagement.Visible = true;
                 }
                 else
                 {
@@ -56,6 +59,8 @@ namespace ELibrary
                     btnBookInventory.Visible = false;
                     btnBookIssuing.Visible = false;
                     btnBookManagement.Visible = false;
+                    btnMemberManagement.Visible = false;
+
                 }
             }
             catch (Exception ex)
@@ -68,26 +73,6 @@ namespace ELibrary
         {
             Response.Redirect("AdminLoginPage.aspx");
         }
-        protected void RedirectToAuthorManagement(object sender, EventArgs e)
-        {
-            Response.Redirect("adminAuthorManagement.aspx");
-        }
-        protected void RedirectToPublisherManagement(object sender, EventArgs e)
-        {
-            Response.Redirect("adminPublisherManagement.aspx");
-        }
-        protected void RedirectToBookInventory(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminBookInventoryPage.aspx");
-        }
-        protected void RedirectToBookIssuing(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminBookIssuePage.aspx");
-        }
-        protected void RedirectBookManagement(object sender, EventArgs e)
-        {
-            Response.Redirect("admiwnAuthorManagement.aspx");
-        }
         protected void RedirectToLogin(object sender, EventArgs e)
         {
             Response.Redirect("UserLogin.aspx");
@@ -96,6 +81,43 @@ namespace ELibrary
         {
             Response.Redirect("UserSignUp.aspx");
         }
+        protected void ViewBooks(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewBooks.aspx");
+        }
+        protected void HandleAdminPages(object sender, EventArgs e)
+        {
+            LinkButton linkButton = sender as LinkButton;
+            if (linkButton != null)
+            {
+                if (linkButton.Text == btnAuthorManagement.Text)
+                {
+                    Response.Redirect("adminAuthorManagement.aspx");
+                }
+                else if (linkButton.Text == btnBookInventory.Text)
+                {
+                    Response.Redirect("AdminBookInventory.aspx");
+                }
+                else if (linkButton.Text == btnBookIssuing.Text)
+                {
+                    Response.Redirect("AdminBookIssuePage.aspx");
+                }
+                else if (linkButton.Text == btnBookManagement.Text)
+                {
+                    // Specify the appropriate URL for Book Management
+                    Response.Redirect("AdminBookManagementPage.aspx");
+                }
+                else if (linkButton.Text == btnMemberManagement.Text)
+                {
+                    Response.Redirect("AdminMemberManagement.aspx");
+                }
+                else if (linkButton.Text == btnPublisherManagement.Text)
+                {
+                    Response.Redirect("adminPublisherManagement.aspx");
+                }
+            }
+        }
+
         protected void LoggingOut(object sender, EventArgs e)
         {
             Session.Remove("username");
