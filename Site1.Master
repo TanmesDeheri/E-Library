@@ -129,7 +129,7 @@
 
                         </li>
                         <li class="nav-item">
-                            <asp:LinkButton CssClass="nav-link" ID="userNameButton" runat="server">Hello User</asp:LinkButton>
+                                <asp:LinkButton CssClass=" nav-link" ID="userNameButton" runat="server" OnClick="RedirectToUserProfile">Hello User</asp:LinkButton>
                         </li>
                     </ul>
                 </div>

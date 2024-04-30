@@ -85,6 +85,10 @@ namespace ELibrary
         {
             Response.Redirect("ViewBooks.aspx");
         }
+        protected void RedirectToUserProfile(object sender, EventArgs e)
+        {
+            Response.Redirect("UserProfilePage.aspx");
+        }
         protected void HandleAdminPages(object sender, EventArgs e)
         {
             LinkButton linkButton = sender as LinkButton;

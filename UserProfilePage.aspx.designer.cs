@@ -24,40 +24,40 @@ namespace ELibrary
         protected global::System.Web.UI.WebControls.Label accountStatusLabel;
 
         /// <summary>
-        /// userSignUpFullName control.
+        /// userFullName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userSignUpFullName;
+        protected global::System.Web.UI.WebControls.TextBox userFullName;
 
         /// <summary>
-        /// userSignUpDOB control.
+        /// DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userSignUpDOB;
+        protected global::System.Web.UI.WebControls.TextBox DOB;
 
         /// <summary>
-        /// TextBox1 control.
+        /// ContactNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox ContactNumber;
 
         /// <summary>
-        /// TextBox2 control.
+        /// EmailId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox EmailId;
 
         /// <summary>
         /// StateDropdown control.
@@ -69,58 +69,58 @@ namespace ELibrary
         protected global::System.Web.UI.WebControls.DropDownList StateDropdown;
 
         /// <summary>
-        /// DropDownList1 control.
+        /// CityDropdown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList CityDropdown;
 
         /// <summary>
-        /// TextBox7 control.
+        /// PinCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox7;
+        protected global::System.Web.UI.WebControls.TextBox PinCode;
 
         /// <summary>
-        /// TextBox3 control.
+        /// FullAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox FullAddress;
 
         /// <summary>
-        /// SignUpUserID control.
+        /// UserID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SignUpUserID;
+        protected global::System.Web.UI.WebControls.TextBox UserID;
 
         /// <summary>
-        /// TextBox6 control.
+        /// OldPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox6;
+        protected global::System.Web.UI.WebControls.TextBox OldPassword;
 
         /// <summary>
-        /// TextBox4 control.
+        /// Newpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox Newpassword;
 
         /// <summary>
         /// userLoginButton control.
